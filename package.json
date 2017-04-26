@@ -1,0 +1,14 @@
+{
+  "name": "cracking-the-coding-interview-js",
+  "version": "0.0.1",
+  "description": "Solving the problems in Cracking the Coding Interview with JS",
+  "main": "\"\"",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Gustavo Saiani",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^19.0.2"
+  }
+}
