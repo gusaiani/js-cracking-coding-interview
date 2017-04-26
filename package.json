@@ -4,11 +4,11 @@
   "description": "Solving the problems in Cracking the Coding Interview with JS",
   "main": "\"\"",
   "scripts": {
-    "test": "npm test"
+    "test": "jest"
   },
   "author": "Gustavo Saiani",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "jest": "^19.0.2"
   }
 }
