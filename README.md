@@ -2,8 +2,4 @@
 
 In this repo I'll practice the exercises from Cracking the Coding Interview using JS.
 
-JS examples are checked by:
-```
-cd js
-node filename.js
-```
+Run examples with `npm test`
