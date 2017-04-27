@@ -17,8 +17,3 @@ String.prototype.areAllCharsUnique = function() {
 
   return true;
 }
-
-console.log("".areAllCharsUnique());
-console.log("arstdhneiqwfp".areAllCharsUnique());
-console.log("teste".areAllCharsUnique());
-console.log("artt".areAllCharsUnique());
