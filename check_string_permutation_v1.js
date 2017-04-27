@@ -6,7 +6,12 @@
  * a permutation of the other.
  */
 
-function checkPermutation(string1, string2) {
-  return false;
+String.prototype.sort = function() {
+  return this.split('').sort().join();
 }
-module.exports = checkPermutation;
+
+function isPermutation(string1, string2) {
+  return string1.sort() === string2.sort();
+}
+
+module.exports = isPermutation;
