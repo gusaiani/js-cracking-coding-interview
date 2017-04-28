@@ -2,5 +2,10 @@
 
 In this repo I'll practice the exercises from Cracking the Coding Interview using JS.
 
-Install with `npm install`
-Run examples with `npm test`
+### Install
+
+`npm install`
+
+### Run
+
+`npm test`
