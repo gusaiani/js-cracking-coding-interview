@@ -4,6 +4,10 @@ test("'pale' and 'ple' are one away", function() {
   expect(oneAway("pale", "ple")).toBe(true);
 });
 
+test("'arst' and 'qwfp' are one away", function() {
+  expect(oneAway("arst", "qwfp")).toBe(false);
+});
+
 test("'ple' and 'pale' are one away", function() {
   expect(oneAway("ple", "pale")).toBe(true);
 });
