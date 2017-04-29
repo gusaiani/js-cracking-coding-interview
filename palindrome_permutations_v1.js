@@ -22,7 +22,6 @@ String.prototype.isPalindromePermutation = function() {
     }
   }
 
-  console.log(linkedList);
   for (let value in linkedList) {
     if (linkedList[value] === 1) {
       numberOfLettersOccurringEvenTimes++;
