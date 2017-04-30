@@ -2,7 +2,7 @@
   * Chapter 1
   * Page 90
   *
-  *   1.3 Palindrome Permutation
+  *   1.4 Palindrome Permutation
   *   Given a string, write a function to check if it is
   *   a permutation of a palindrome.
  */
