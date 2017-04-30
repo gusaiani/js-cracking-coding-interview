@@ -13,7 +13,6 @@
  */
 
 String.prototype.compress = function() {
-  const originalString = this;
   let compressedArray = [];
 
   let currentChar = this.charAt(0);
@@ -34,6 +33,5 @@ String.prototype.compress = function() {
 
   compressedString = compressedArray.join('');
 
-  if (this.length <= compressedString.length) {return this.toString();}
-  return compressedString;
+  return (this.length <= compressedString.length) ? this.toString() : compressedString;
 }
