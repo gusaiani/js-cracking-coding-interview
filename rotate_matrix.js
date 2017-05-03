@@ -9,5 +9,20 @@
  */
 
 Array.prototype.rotate = function() {
-  return this;
+  var newMatrix = [];
+  const rowLength = Math.sqrt(this.length);
+  newMatrix.length = this.length;
+
+  for (var i = 0; i < this.length; i++) {
+    const x = i % rowLength;
+    const y = Math.floor(i / rowLength);
+
+    const newX = rowLength - y - 1;
+    const newY = x;
+
+    const newPosition = newY * rowLength + newX;
+    newMatrix[newPosition] = this[i];
+  }
+
+  return newMatrix;
 }
