@@ -6,17 +6,17 @@ test("[[0,0]] returns [[0,0]]", function() {
 
 test("4-sided matrix rotates", function() {
   const fourTileSquare = [
-    ['a'], ['b'], ['c'], ['d'],
-    ['e'], ['f'], ['g'], ['h'],
-    ['i'], ['j'], ['k'], ['l'],
-    ['m'], ['n'], ['o'], ['p']
+    'a', 'b', 'c', 'd',
+    'e', 'f', 'g', 'h',
+    'i', 'j', 'k', 'l',
+    'm', 'n', 'o', 'p'
   ];
 
   const rotatedFourTileSquare = [
-    ['m'], ['i'], ['e'], ['a'],
-    ['n'], ['j'], ['f'], ['b'],
-    ['o'], ['k'], ['g'], ['c'],
-    ['p'], ['l'], ['h'], ['d']
+    'm', 'i', 'e', 'a',
+    'n', 'j', 'f', 'b',
+    'o', 'k', 'g', 'c',
+    'p', 'l', 'h', 'd'
   ];
 
   expect(fourTileSquare.rotate()).toEqual(rotatedFourTileSquare);
