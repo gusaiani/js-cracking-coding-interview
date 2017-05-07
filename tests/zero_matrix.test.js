@@ -37,3 +37,20 @@ test("rectangular matrix", function() {
 
   expect(zero(untreatedRectangle)).toEqual(treatedRectangle);
 })
+
+test("rectangular matrix with two zeros", function() {
+  const untreatedRectangle = {
+    dimensions: {x: 8, y: 2},
+    matrix: [
+      'a',  0, 'c', 'd', 'e',  0,  'g', 'h',
+      'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'
+    ]
+  };
+
+  const treatedRectangle = [
+     0 ,  0 ,  0 ,  0 ,  0 , 0,  0 ,  0,
+    'i',  0, 'k', 'l', 'm', 0, 'o', 'p'
+  ];
+
+  expect(zero(untreatedRectangle)).toEqual(treatedRectangle);
+})
