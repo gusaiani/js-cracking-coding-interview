@@ -6,6 +6,11 @@
  * is zero, its entire row and column are set to 0.
  */
 
+// This solution has one clear inefficiency
+// If the matrix has zeroes in repeated x or y positions,
+// the function will treat them repeated times.
+// A linked list or a check of the array before converting
+// to zero will fix that quite simply.
 function zero(arr) {
   let indexesWithZero = [];
 
