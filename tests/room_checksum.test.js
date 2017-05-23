@@ -1015,5 +1015,5 @@ test('sum sector IDs of Real Rooms', () => {
 		'bxaxipgn-vgpst-qphzti-rdcipxcbtci-635[ipctx]',
   ]
   // this is temporarily made to fail
-  expect(sumSectorIDsOfRealRooms(rooms)).toBe(1);
+  expect(sumSectorIDsOfRealRooms(rooms)).toBe(361724);
 });

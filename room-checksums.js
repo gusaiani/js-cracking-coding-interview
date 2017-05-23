@@ -1,35 +1,36 @@
 function sumSectorIDsOfRealRooms(rooms) {
-  let sum = 0;
-
-  for (let i = 0; i < rooms.length; i++) {
-    const {isReal, id} = checkRoom(rooms[i]);
-
-    if (isReal === true) {
-      sum += id;
-    }
-  }
-
-  return sum;
+  return rooms.reduce(function(acc, room) {
+    const {isReal, id} = checkRoom(room);
+    return isReal ? acc + id : acc;
+  }, 0);
 }
 
 function checkRoom(room) {
-  const checksumWithBracket = room.split('[').pop();
-  const checksum = checksumWithBracket.split(']').shift();
-
-  const allButChecksum = room.split('[').shift();
-  const id = parseInt(allButChecksum.split('-').pop());
-
-  const encryptedName = allButChecksum.replace(/[^a-z]/g, '');
-
-  const sortedEncryptedName = encryptedName.split('').sort().join('');
-
-  const charCount = countChars(sortedEncryptedName);
-
-  const commonChars = getCommonChars(charCount);
+  const checksum = getChecksum(room);
+  const id = getId(room);
+  const commonChars = getCommonChars(room);
 
   const isReal = (commonChars === checksum);
 
   return {isReal: isReal, id: id};
+}
+
+function getChecksum(string) {
+  return string.split('[').pop().split(']').shift();
+}
+
+function getId(string) {
+  const allButChecksum = getAllButChecksum(string);
+  return parseInt(allButChecksum.split('-').pop());
+}
+
+function getSortedEncryptedName(string) {
+  const allButChecksum = getAllButChecksum(string);
+  return allButChecksum.replace(/[^a-z]/g, '').split('').sort().join('');
+}
+
+function getAllButChecksum(string) {
+  return string.split('[').shift();
 }
 
 function countChars(string) {
@@ -46,11 +47,13 @@ function countChars(string) {
   return linkedList;
 }
 
-function getCommonChars(list) {
+function getCommonChars(string) {
+  const list = getLinkedListOfChars(string);
+
   var sortable = [];
 
   for (var entries in list) {
-      sortable.push([entries, list[entries]]);
+    sortable.push([entries, list[entries]]);
   }
 
   sortable.sort(function(a, b) {
@@ -60,6 +63,11 @@ function getCommonChars(list) {
   return sortable.slice(0,5).map(function(entry) {
     return entry[0];
   }).join('');
+}
+
+function getLinkedListOfChars(string) {
+  const sortedEncryptedName = getSortedEncryptedName(string);
+  return countChars(sortedEncryptedName);
 }
 
 module.exports = {
