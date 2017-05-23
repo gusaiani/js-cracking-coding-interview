@@ -48,8 +48,7 @@ function countChars(string) {
 }
 
 function getCommonChars(string) {
-  const sortedEncryptedName = getSortedEncryptedName(string);
-  const list = countChars(sortedEncryptedName);
+  const list = getLinkedListOfChars(string);
 
   var sortable = [];
 
@@ -64,6 +63,11 @@ function getCommonChars(string) {
   return sortable.slice(0,5).map(function(entry) {
     return entry[0];
   }).join('');
+}
+
+function getLinkedListOfChars(string) {
+  const sortedEncryptedName = getSortedEncryptedName(string);
+  return countChars(sortedEncryptedName);
 }
 
 module.exports = {
