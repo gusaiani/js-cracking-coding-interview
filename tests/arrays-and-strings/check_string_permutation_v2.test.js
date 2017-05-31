@@ -1,4 +1,4 @@
-const isPermutation = require('../check_string_permutation_v1');
+const isPermutation = require('../../arrays-and-strings/check_string_permutation_v2');
 
 test('"a" and "a" are permutations', () => {
   expect(isPermutation("a", "a")).toBe(true);

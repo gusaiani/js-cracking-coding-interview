@@ -1,5 +1,5 @@
-const checkRoom = require('../room-checksums').checkRoom;
-const sumSectorIDsOfRealRooms = require('../room-checksums').sumSectorIDsOfRealRooms;
+const checkRoom = require('../../arrays-and-strings/room-checksums').checkRoom;
+const sumSectorIDsOfRealRooms = require('../../arrays-and-strings/room-checksums').sumSectorIDsOfRealRooms;
 
 test('aaaaa-bbb-z-y-x-123[abxyz] is a real room', () => {
   expect(checkRoom('aaaaa-bbb-z-y-x-123[abxyz]')).toEqual(

@@ -1,4 +1,4 @@
-const isRotation = require('../check_string_rotation_v2');
+const isRotation = require('../../arrays-and-strings/check_string_rotation_v2');
 
 test('"waterbottle" and "erbottlewat" are rotations', () => {
   expect(isRotation("waterbottle", "erbottlewat")).toBe(true);
