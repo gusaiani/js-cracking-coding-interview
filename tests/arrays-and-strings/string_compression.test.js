@@ -1,4 +1,4 @@
-require('../string_compression');
+require('../../arrays-and-strings/string_compression');
 
 test("'' returns ''", function() {
   expect(("").compress()).toBe("");

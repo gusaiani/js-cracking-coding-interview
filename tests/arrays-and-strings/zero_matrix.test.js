@@ -1,4 +1,4 @@
-const zero = require('../zero_matrix');
+const zero = require('../../arrays-and-strings/zero_matrix');
 
 test("square matrix", function() {
   const fourTileSquare = {

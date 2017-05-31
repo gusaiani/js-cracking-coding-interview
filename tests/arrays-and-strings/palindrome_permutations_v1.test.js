@@ -1,4 +1,4 @@
-require('../palindrome_permutations_v1');
+require('../../arrays-and-strings/palindrome_permutations_v1');
 
 test("'Tact Coa' is a palindrome permutation", function() {
   expect("Tact Coa".isPalindromePermutation()).toBe(true);

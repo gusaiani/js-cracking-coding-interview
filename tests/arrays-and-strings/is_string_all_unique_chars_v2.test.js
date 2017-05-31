@@ -1,4 +1,4 @@
-require('../is_string_all_unique_chars_v1');
+require('../../arrays-and-strings/is_string_all_unique_chars_v2');
 
 test('"" to have all unique chars', () => {
   expect("".areAllCharsUnique()).toBe(true);

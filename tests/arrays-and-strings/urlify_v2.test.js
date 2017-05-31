@@ -1,4 +1,4 @@
-require('../urlify_v2.js');
+require('../../arrays-and-strings/urlify_v2.js');
 
 test("urlify www.google.com", function() {
   expect("www.google.com".urlify()).toBe("www.google.com")

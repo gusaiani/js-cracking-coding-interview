@@ -1,4 +1,4 @@
-const oneAway = require('../one_away');
+const oneAway = require('../../arrays-and-strings/one_away');
 
 test("'pale' and 'ple' are one away", function() {
   expect(oneAway("pale", "ple")).toBe(true);
