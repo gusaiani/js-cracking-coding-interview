@@ -54,3 +54,5 @@ LinkedList.prototype.removeDuplicates = function() {
     p2 = p2.next;
   }
 }
+
+module.exports = LinkedList;
