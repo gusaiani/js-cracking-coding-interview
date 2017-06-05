@@ -41,14 +41,14 @@ LinkedList.prototype.removeDuplicates = function() {
 
   p1 = this.head;
   p2 = p1.next;
-  nodes[p1.data] = true;
+  nodes[p1.value] = true;
 
   while (p2) {
-    var data = p2.data;
-    if (nodes[data]) {
+    var value = p2.value;
+    if (nodes[value]) {
       p1.next = p2.next;
     } else {
-      nodes[data] = true;
+      nodes[value] = true;
       p1 = p2;
     }
     p2 = p2.next;
