@@ -6,27 +6,7 @@
  *   Write code to remove duplicates from an unsorted linked list
  */
 
-function LinkedList() {
-  this.head = null;
-}
-
-LinkedList.prototype.push = function(val) {
-  var node = {
-    value: val,
-    next: null
-  }
-
-  if (!this.head) {
-    this.head = node;
-  } else {
-    var current = this.head;
-
-    while (current.next) {
-      current = current.next;
-    }
-    current.next = node;
-  }
-}
+const LinkedList = require('./linked-list');
 
 LinkedList.prototype.removeDuplicates = function() {
   // Empty or a single element Linked List
