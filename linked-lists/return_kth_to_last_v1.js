@@ -8,11 +8,17 @@
 
 const LinkedList = require('./linked-list');
 
-LinkedList.prototype.removeKthToLast = function(kthToLast) {
+LinkedList.prototype.returnKthToLast = function(kthToLast) {
   // Empty or a single element Linked List
   if (!this.head) {
     console.log('This list is empty');
     return;
+  }
+
+  // kthToLast value must be valid
+  if (kthToLast < 0) {
+    console.log('kthToLast value must be an integer and larger than 0');
+    return undefined;
   }
 
   var p1;
@@ -27,19 +33,16 @@ LinkedList.prototype.removeKthToLast = function(kthToLast) {
     p2 = p2.next;
   }
 
-  const nodeToRemove = nodes - kthToLast - 1;
+  const nodeToRemove = nodes - kthToLast;
   p1 = this.head;
   p2 = p1.next;
 
-  if (kthToLast == (nodes - 1)) {
-    this.head = p2;
-    p1 = p2;
-    p2 = p2.next;
+  if (kthToLast == nodes) {
+    return p1.value;
   } else {
     for (i = 0; i < nodes; i++) {
       if (i == nodeToRemove - 1) {
-        p1.next = p2.next;
-        i++;
+        return p1.value;
       } else {
         p1 = p2;
       }
