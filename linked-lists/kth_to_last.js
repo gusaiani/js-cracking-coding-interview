@@ -2,13 +2,13 @@
  * Chapter 2
  * Page 94
  *
- *   2.1 Remove Dups:
- *   Write code to remove duplicates from an unsorted linked list
+ *   2.1 Return kth to last:
+ *   Implement an algorithm to find the kth to last element of a singly linked list.
  */
 
 const LinkedList = require('./linked-list');
 
-LinkedList.prototype.removeKthToLast = function(kthToLast) {
+LinkedList.prototype.kthToLast = function(kthToLast) {
   // Empty or a single element Linked List
   if (!this.head) {
     console.log('This list is empty');
@@ -27,7 +27,7 @@ LinkedList.prototype.removeKthToLast = function(kthToLast) {
     p2 = p2.next;
   }
 
-  const nodeToRemove = nodes - kthToLast - 1;
+  const nodeToReturn = nodes - kthToLast - 1;
   p1 = this.head;
   p2 = p1.next;
 
@@ -37,7 +37,7 @@ LinkedList.prototype.removeKthToLast = function(kthToLast) {
     p2 = p2.next;
   } else {
     for (i = 0; i < nodes; i++) {
-      if (i == nodeToRemove - 1) {
+      if (i == nodeToReturn - 1) {
         p1.next = p2.next;
         i++;
       } else {
