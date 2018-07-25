@@ -78,7 +78,6 @@ SinglyList.prototype.remove = function(position) {
 
     // 3rd use-case: any other node is removed
     while (count < position) {
-        console.log(util.inspect(this, false, null))
         beforeNodeToDelete = currentNode;
         nodeToDelete = currentNode.next;
         currentNode = currentNode.next;
@@ -93,4 +92,16 @@ SinglyList.prototype.remove = function(position) {
     return deletedNode;
 };
 
-module.exports = SinglyList;
+a = new SinglyList()
+
+for (let i = 1; i < 9; i++) {
+  a.add(i)
+}
+
+const util = require('util')
+console.log(util.inspect(a, false, null))
+console.log('-'.repeat(15))
+a.remove(3)
+console.log(util.inspect(a, false, null))
+
+// module.exports = SinglyList;
